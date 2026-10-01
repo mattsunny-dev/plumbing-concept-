@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueLine Plumbing | Dallas, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B2545;--deep:#071A31;--orange:#FF7A1A;--light:#F2F5F9;--ink:#13233A;--muted:#5B6878}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;font:400 1rem/1.65 Barlow,system-ui,sans-serif;color:var(--ink);background:#fff;padding-bottom:4.2rem}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;margin:0;line-height:1.05}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+.btn{display:inline-block;padding:.8rem 1.5rem;background:var(--orange);color:#1a0d00;font:700 1.05rem "Barlow Condensed",sans-serif;letter-spacing:.05em;text-transform:uppercase;border:2px solid var(--orange);border-radius:.3rem;cursor:pointer;text-align:center}
+.btn.line{background:transparent;color:#fff;border-color:#fff}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+.top{background:var(--deep);color:#cfd9e6;font-size:.85rem;text-align:center;padding:.4rem 1rem}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:4rem;gap:1rem}
+.logo{font:700 1.6rem "Barlow Condensed",sans-serif;letter-spacing:.03em}.logo span{color:var(--orange)}
+nav{display:none;gap:1.75rem;font-weight:600}
+nav a:hover{color:var(--orange)}
+header .btn{padding:.45rem 1rem;font-size:.95rem}
+@media(min-width:800px){nav{display:flex}}
+
+.hero{background:linear-gradient(120deg,var(--navy),#12396b);color:#fff;padding:3.5rem 0 4rem}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center;grid-template-columns:1.2fr 1fr}
+.k{color:var(--orange);font:700 1rem "Barlow Condensed",sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:0 0 .6rem}
+h1{font-size:clamp(2.6rem,8vw,4.5rem);margin-bottom:1rem}
+.lead{color:#d3deec;max-width:30rem;margin:0 0 1.5rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin-top:1.5rem;font-size:.92rem;color:#d3deec}
+.badges span::before{content:"\2713 ";color:var(--orange);font-weight:700}
+.quote{background:#fff;color:var(--ink);padding:1.5rem;border-radius:.6rem;border-top:6px solid var(--orange)}
+.quote h2{font-size:1.8rem;margin-bottom:.2rem}
+.quote p.s{margin:0 0 1rem;color:var(--muted);font-size:.92rem}
+form{display:grid;gap:.8rem}
+label{display:grid;gap:.25rem;font-weight:600;font-size:.88rem}
+input,select,textarea{font:inherit;padding:.7rem;border:2px solid #cdd6e1;border-radius:.3rem;width:100%;background:#fff}
+textarea{min-height:5rem;resize:vertical}
+#msg{margin:.2rem 0 0;font-weight:600;color:var(--navy);min-height:1.4rem}
+.fine{margin:.5rem 0 0;color:var(--muted);font-size:.78rem}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}}
+
+section{padding:4rem 0}
+h2.t{font-size:clamp(2rem,5vw,2.8rem);text-align:center;margin-bottom:.4rem}
+.sub{text-align:center;color:var(--muted);max-width:32rem;margin:0 auto 2.25rem}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.svc{background:#fff;border:1px solid #dde4ec;border-bottom:4px solid var(--orange);padding:1.4rem;border-radius:.4rem}
+.svc i{font-style:normal;font-size:1.8rem}
+.svc h3{font-size:1.4rem;margin:.4rem 0 .3rem}
+.svc p{margin:0;color:var(--muted);font-size:.95rem}
+.gray{background:var(--light)}
+.steps{counter-reset:s}
+.step{background:#fff;padding:1.4rem;border-radius:.4rem}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--navy);color:#fff;font:700 1.3rem "Barlow Condensed",sans-serif;margin-bottom:.6rem}
+.step h3{font-size:1.4rem;margin-bottom:.2rem}.step p{margin:0;color:var(--muted)}
+.rev{background:var(--light);padding:1.25rem;border-radius:.4rem}
+.rev .st{color:var(--orange);letter-spacing:.1em}
+.rev p{margin:.3rem 0 .5rem}.rev b{font-size:.9rem}
+.note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:1.25rem}
+.band{background:var(--navy);color:#fff;text-align:center;padding:3rem 0}
+.band h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:.6rem}
+footer{background:var(--deep);color:#b9c6d6;padding:2.5rem 0 1.5rem;font-size:.92rem}
+footer .wrap{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
+footer h4{color:#fff;margin:0 0 .4rem;font:700 1.15rem "Barlow Condensed",sans-serif;letter-spacing:.05em}
+footer p{margin:.2rem 0}
+.copy{text-align:center;color:#7e8da0;font-size:.8rem;margin-top:2rem}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;gap:.6rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom,0px));background:var(--deep);box-shadow:0 -4px 14px rgba(0,0,0,.25)}
+.bar .btn{flex:1;padding:.7rem .5rem}
+@media(min-width:800px){.bar{display:none}body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="top">Open 24/7 for emergencies &bull; Serving Dallas and nearby areas</div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">BlueLine <span>Plumbing</span></a>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#quote">Free quote</a></nav>
+    <a class="btn" href="tel:+12145550178">Call (214) 555-0178</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:3.5rem">
+  <div class="wrap">
+    <div>
+      <p class="k">Dallas, Texas</p>
+      <h1>Fast, honest plumbing. Fixed right the first time.</h1>
+      <p class="lead">Leaks, clogged drains, water heaters and emergencies. Upfront pricing and a friendly licensed plumber at your door, often the same day.</p>
+      <div class="btns"><a class="btn" href="tel:+12145550178">Call now</a><a class="btn line" href="#quote">Get a free quote</a></div>
+      <div class="badges"><span>Licensed &amp; insured</span><span>Upfront pricing</span><span>Same-day service</span></div>
+    </div>
+    <div class="quote" id="quote">
+      <h2>Get a free quote</h2>
+      <p class="s">Tell us what's wrong and we'll call you back fast.</p>
+      <form id="form">
+        <label>Name<input id="name" required autocomplete="name"></label>
+        <label>Phone<input id="phone" type="tel" required autocomplete="tel"></label>
+        <label>What do you need?
+          <select id="svc" required><option value="">Choose a service</option><option>Leak repair</option><option>Drain cleaning</option><option>Water heater</option><option>Emergency plumbing</option><option>Bathroom or kitchen</option><option>Something else</option></select>
+        </label>
+        <label>Details (optional)<textarea id="note"></textarea></label>
+        <button class="btn" type="submit">Request my quote</button>
+        <p id="msg" role="status"></p>
+      </form>
+      <p class="fine">Demo form for a concept project. Nothing is sent or stored.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="t">Our Services</h2>
+    <p class="sub">Service calls start at $89, applied to your repair when you hire us.</p>
+    <div class="grid">
+      <div class="svc"><i>&#128167;</i><h3>Leak Repair</h3><p>Find and fix leaking pipes, faucets and fixtures before they damage your home.</p></div>
+      <div class="svc"><i>&#128703;</i><h3>Drain Cleaning</h3><p>Clear stubborn clogs in sinks, showers and main lines.</p></div>
+      <div class="svc"><i>&#128293;</i><h3>Water Heaters</h3><p>Repair and replacement of tank and tankless water heaters.</p></div>
+      <div class="svc"><i>&#128680;</i><h3>Emergency Plumbing</h3><p>Burst pipe at midnight? We answer day and night, every day.</p></div>
+      <div class="svc"><i>&#128701;</i><h3>Bathroom &amp; Kitchen</h3><p>Install toilets, sinks, garbage disposals and more.</p></div>
+      <div class="svc"><i>&#128295;</i><h3>Pipe Repair</h3><p>Repairs and repiping for old or damaged lines.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gray" id="how">
+  <div class="wrap">
+    <h2 class="t">How It Works</h2>
+    <p class="sub">Three simple steps from problem to fixed.</p>
+    <div class="grid steps">
+      <div class="step"><h3>Call or request a quote</h3><p>Tell us what is going on and when you're free.</p></div>
+      <div class="step"><h3>We arrive and give a price</h3><p>You approve the cost before any work begins.</p></div>
+      <div class="step"><h3>Problem solved</h3><p>We fix it, clean up and check everything works.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="t">What Customers Say</h2>
+    <p class="sub">Sample reviews for this concept project.</p>
+    <div class="grid">
+      <div class="rev"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"Showed up within the hour and fixed our leak. Fair price too."</p><b>Karen S., Dallas</b></div>
+      <div class="rev"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"Clear quote up front, no surprises. Highly recommend."</p><b>James P., Plano</b></div>
+      <div class="rev"><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"New water heater installed the same day. Great crew."</p><b>Maria L., Irving</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Plumbing problem? Don't wait.</h2>
+    <a class="btn" href="tel:+12145550178">Call (214) 555-0178</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="logo" style="color:#fff">BlueLine <span>Plumbing</span></div><p>Licensed &amp; insured plumbers</p></div>
+    <div><h4>Contact</h4><p>(214) 555-0178</p><p>service@blueline.example</p></div>
+    <div><h4>Service area</h4><p>Dallas, Plano, Irving and nearby</p></div>
+  </div>
+  <p class="copy">Concept project with sample content. Designed and built by Matt Sunday.</p>
+</footer>
+
+<div class="bar"><a class="btn" href="tel:+12145550178">Call now</a><a class="btn line" href="#quote">Free quote</a></div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  var n = document.getElementById("name").value.trim().split(" ")[0];
+  document.getElementById("msg").textContent = "Thanks, " + n + "! We'd call you back shortly. (Demo only: nothing was sent.)";
+  this.reset();
+});
+</script>
+</body>
+</html>
